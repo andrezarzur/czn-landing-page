@@ -1,39 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import {
-  BoltIcon,
-  BuildingOfficeIcon,
-  Cog6ToothIcon,
-  SpeakerWaveIcon,
-  ComputerDesktopIcon
-} from '@heroicons/vue/24/outline'
 
-import bgHeader from '@/assets/twst.jpeg'
 
-const areas = [
-  {
-    title: 'Elétrica',
-    icon: BoltIcon,
-    items: [
-      'Subestações Transformadoras',
-      'Sistemas de Geração de Energia',
-      'Instalações em Média e Baixa Tensão',
-      'Eficiência Energética',
-      'Iluminação e SPDA'
-    ]
-  },
-  {
-    title: 'Hidráulica',
-    icon: SpeakerWaveIcon,
-    items: [
-      'Redes de Água Potável',
-      'Drenagem Pluvial',
-      'Centrais de Água Gelada (CAG)',
-      'Esgoto Sanitário',
-      'Combate a Incêndio'
-    ]
-  },
-]
 // Dados reativos
 const selectedCategory = ref<string>('todos')
 const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
