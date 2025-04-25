@@ -85,7 +85,7 @@ const smoothScroll = (id: string) => {
       <p class="text-xl text-gray-100 mb-8">
         Soluções integradas em engenharia elétrica e hidráulica
       </p>
-      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition">
+      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition" >
         Solicitar Orçamento
       </button>
     </div>
@@ -148,36 +148,30 @@ const smoothScroll = (id: string) => {
     <div class="relative z-10 container mx-auto px-6 text-center">
       <p class="uppercase text-sm mb-2">Conheça nossas</p>
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Áreas de <span class="text-primary">Atuação</span></h2>
-      <p class="mb-12 max-w-xl mx-auto">
-        Empresa multidisciplinar que atua nos segmentos de Engenharia:
-      </p>
   
-      <!-- Dois cards lado a lado ou empilhados -->
-      <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto">
-        <!-- Elétrica -->
-        <div class="flex-1 p-6 bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition text-left">
-          <h3 class="text-xl font-semibold mb-4">Elétrica</h3>
-          <ul class="text-sm space-y-2 list-disc list-inside">
-            <li>Subestações Transformadoras</li>
-            <li>Sistemas de Geração de Energia</li>
-            <li>Instalações em Média e Baixa Tensão</li>
-            <li>Eficiência Energética</li>
-            <li>Iluminação e SPDA</li>
-          </ul>
+      <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto py-8">
+        <div class="flex-1 p-8 bg-gray-700 text-gray-200 rounded-2xl shadow-xl hover:shadow-2xl hover:translate-y-1 transition duration-300 ease-in-out text-left border border-gray-700 hover:border-blue-500">
+            <h3 class="text-2xl font-bold mb-6 text-blue-400">Elétrica</h3>
+            <ul class="text-base space-y-3 list-disc list-inside">
+                <li>Subestações Transformadoras</li>
+                <li>Sistemas de Geração de Energia</li>
+                <li>Instalações em Média e Baixa Tensão</li>
+                <li>Eficiência Energética</li>
+                <li>Iluminação e SPDA</li>
+            </ul>
         </div>
-  
-        <!-- Hidráulica -->
-        <div class="flex-1 p-6 bg-gray-700 rounded-xl shadow-md hover:shadow-lg transition text-left">
-          <h3 class="text-xl font-semibold mb-4">Hidráulica</h3>
-          <ul class="text-sm space-y-2 list-disc list-inside">
-            <li>Redes de Água Potável</li>
-            <li>Drenagem Pluvial</li>
-            <li>Centrais de Água Gelada (CAG)</li>
-            <li>Esgoto Sanitário</li>
-            <li>Combate a Incêndio</li>
-          </ul>
+    
+        <div class="flex-1 p-8 bg-gray-700 text-gray-200 rounded-2xl shadow-xl hover:shadow-2xl hover:translate-y-1 transition duration-300 ease-in-out text-left border border-gray-700 hover:border-blue-500">
+            <h3 class="text-2xl font-bold mb-6 text-blue-400">Hidráulica</h3>
+            <ul class="text-base space-y-3 list-disc list-inside">
+                <li>Redes de Água Potável</li>
+                <li>Drenagem Pluvial</li>
+                <li>Centrais de Água Gelada (CAG)</li>
+                <li>Esgoto Sanitário</li>
+                <li>Combate a Incêndio</li>
+            </ul>
         </div>
-      </div>
+    </div>
     </div>
   </section>
   
