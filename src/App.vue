@@ -234,7 +234,7 @@ const smoothScroll = (id: string) => {
       <div class="flex overflow-hidden">
         <div class="animate-marquee flex items-center space-x-24 px-4">
           <!-- Original Set -->
-          <template v-for="(logo, index) in 2" :key="index">
+          <template v-for="index in 2" :key="index">
             <img src="./assets/logo-three.png" alt="Three" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-ecg.png" alt="ECG" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-godoi.png" alt="Godoi" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
