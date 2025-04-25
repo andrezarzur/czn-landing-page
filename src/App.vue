@@ -42,12 +42,13 @@ const smoothScroll = (id: string) => {
 
 <template>
   <!-- Header -->
-  <header class="sticky top-0 bg-white shadow-sm z-50 h-24 flex items-center">
+  <header class="sticky top-0 bg-white shadow-sm z-50 h-20 flex items-center">
     <nav class="container mx-auto px-6 py-4">
       <div class="flex items-center justify-between">
-        <div class="text-3xl font-bold text-primary">
+        <!-- <div class="text-3xl font-bold text-primary">
           CZN
-        </div>
+        </div> -->
+        <img src="./assets/logotype-red.png" alt="Logo" class="h-20 w-20">
         <div class="hidden md:flex space-x-8">
           <a 
             href="#servicos" 
@@ -100,16 +101,16 @@ const smoothScroll = (id: string) => {
       <div>
         <p class="text-sm text-primary uppercase mb-2">Sobre Nós</p>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          Mais de 28 anos de qualidade, seriedade e profissionalismo
+          Há 31 anos, entregando excelência, seriedade e inovação
         </h2>
         <p class="text-gray-600 mb-4">
-          A CZN Engenharia foi fundada em 1987 no tradicional bairro do Itaim Bibi, em São Paulo, e hoje acumula mais de 200 projetos e obras concluídas em todo território nacional.
+          Na <strong>CZN Engenharia</strong>, somos especialistas em projetos e consultoria de sistemas hidráulicos, elétricos e de combate a incêndio — oferecendo soluções integradas que garantem segurança, eficiência e máximo retorno para o seu investimento.
         </p>
         <p class="text-gray-600 mb-4">
-          Somos uma empresa multidisciplinar que atua nos segmentos de Engenharia Elétrica, Civil, Mecânica, Hidráulica e Sistemas Especiais, formada por profissionais com grande capacidade e experiência nas atividades de gerenciamento e execução de obras públicas e privadas.
+          Trabalhamos lado a lado com você, entendendo suas necessidades e expectativas para transformar ideias em obras concretas, dentro do prazo e do orçamento definidos.
         </p>
         <p class="text-gray-600">
-          Temos como principal característica a excelência na entrega de nossas obras através de um rigoroso padrão de qualidade, sendo capazes de realizar projetos de alta complexidade técnica. Ao longo de mais de 38 anos de existência, a CZN Engenharia tornou‑se uma das mais admiradas empresas do Brasil.
+          Desde 1994, a CZN Engenharia se orgulha de construir parcerias duradouras, entregando resultados que superam metas e consolidam a confiança dos nossos clientes em todo o Brasil.
         </p>
       </div>
 
@@ -224,35 +225,77 @@ const smoothScroll = (id: string) => {
     </div>
   </section>
 
-  <section id="contato" class="py-16 bg-white text-gray-800">
-    <div class="container mx-auto px-6 text-center">
-      <p class="uppercase text-sm text-red-700 mb-2">Contato</p>
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">Fale Conosco</h2>
+  <!-- Clients Section -->
+  <section class="py-12 bg-gray-50 overflow-hidden">
+    <div class="relative">
+      <h2 class="text-3xl font-bold text-center mb-12">Clientes e Parceiros</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto h-64">
-
-        <div class="bg-gray-100 p-12 rounded-lg shadow-md flex flex-col items-center text-center">
-          <div class="p-3 bg-red-100 rounded-full mb-4">
-            <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-          </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">Endereço</h3>
-          <p class="text-gray-600 text-sm">Rua da Engenharia, 123<br>Mooca, São Paulo - SP<br>CEP 01234-000</p>
+      <!-- Animated Logos Container -->
+      <div class="flex overflow-hidden">
+        <div class="animate-marquee flex items-center space-x-24 px-4">
+          <!-- Original Set -->
+          <template v-for="(logo, index) in 2" :key="index">
+            <img src="./assets/logo-three.png" alt="Three" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-ecg.png" alt="ECG" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-godoi.png" alt="Godoi" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-precolandia.png" alt="Precolandia" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-brasilit.png" alt="Brasilit" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-fabrica.png" alt="Fabrica" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-fatec.png" alt="Fatec" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-liceu.png" alt="Liceu" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-npc.png" alt="NPC" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-usp.png" alt="USP" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-unifesp.png" alt="Unifesp" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-senai.png" alt="Senai" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-sesi.png" alt="Sesi" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+          </template>
         </div>
-
-        <div class="bg-gray-100 p-12 rounded-lg shadow-md flex flex-col items-center text-center">
-           <div class="p-3 bg-red-100 rounded-full mb-4">
-             <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m16 0l-7.89-5.26a2 2 0 00-2.22 0L3 12"></path></svg>
-           </div>
-           <h3 class="text-lg font-semibold text-gray-800 mb-2">Email</h3>
-           <p class="text-gray-600 text-sm"><a href="mailto:contato@CZN.com.br" class="hover:underline">contato@CZN.com.br</a></p>
-         </div>
-
-        <div class="bg-gray-100 p-12 rounded-lg shadow-md flex flex-col items-center text-center">
-          <div class="p-3 bg-red-100 rounded-full mb-4">
-            <svg class="w-6 h-6 text-red-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+      </div>
+  
+      <!-- Gradient Fade Effect -->
+      <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+      <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+    </div>
+  </section>
+  
+  <section id="contato" class="py-20 bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-6 text-center">
+      <p class="uppercase text-sm text-red-600 font-semibold mb-3">Contato</p>
+      <h2 class="text-4xl md:text-5xl font-bold mb-12">Fale Conosco</h2>
+  
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Endereço -->
+        <div class="bg-white p-10 rounded-xl shadow-md text-center hover:shadow-lg transition">
+          <div class="p-4 bg-red-100 rounded-full w-fit mx-auto mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
           </div>
-          <h3 class="text-lg font-semibold text-gray-800 mb-2">Telefone</h3>
-          <p class="text-gray-600 text-sm">55 11 1234 5678</p>
+          <h3 class="text-lg font-semibold mb-2">Endereço</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Avenida Santa Inês 1139, sala 3<br>Parque Mandaqui – São Paulo / SP<br>CEP 02415-001</p>
+        </div>
+  
+        <!-- Email -->
+        <div class="bg-white p-10 rounded-xl shadow-md text-center hover:shadow-lg transition">
+          <div class="p-4 bg-red-100 rounded-full w-fit mx-auto mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m16 0l-7.89-5.26a2 2 0 00-2.22 0L3 12"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Email</h3>
+          <p class="text-gray-600 text-sm"><a href="mailto:czneng@uol.com.br" class="hover:underline">czneng@uol.com.br</a></p>
+        </div>
+  
+        <!-- Telefone -->
+        <div class="bg-white p-10 rounded-xl shadow-md text-center hover:shadow-lg transition">
+          <div class="p-4 bg-red-100 rounded-full w-fit mx-auto mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-2">Telefone</h3>
+          <p class="text-gray-600 text-sm">+55 (11) 2952-1317</p>
         </div>
       </div>
     </div>
@@ -288,8 +331,6 @@ const smoothScroll = (id: string) => {
           <li><a href="#" class="hover:text-white">Áreas de atuação</a></li>
           <li><a href="#" class="hover:text-white">Projetos</a></li>
           <li><a href="#" class="hover:text-white">Clientes</a></li>
-          <li><a href="#" class="hover:text-white">Compliance</a></li>
-          <li><a href="#" class="hover:text-white">Notícias</a></li>
         </ul>
       </div>
   
@@ -297,11 +338,11 @@ const smoothScroll = (id: string) => {
       <div>
         <h5 class="text-lg font-semibold mb-4">Contato</h5>
         <p class="text-gray-400 text-sm leading-relaxed">
-          Rua da Engenharia, 123<br>
-          São Paulo - SP<br>
-          CEP 01234-000<br>
-          <a href="mailto:contato@CZN.com.br" class="hover:text-white">contato@CZN.com.br</a><br>
-          <span>Tel: (11) 1234-5678</span>
+          Avenida Santa Inês 1139, sala 3<br>
+          Parque Mandaqui – São Paulo / SP<br>
+          CEP 02415-001<br>
+          <a href="mailto:czneng@uol.com.br" class="hover:text-white">czneng@uol.com.br</a><br>
+          <span>Tel: (11) 2952-1317</span>
         </p>
       </div>
   
@@ -318,6 +359,18 @@ const smoothScroll = (id: string) => {
 </template>
 
 <style>
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  display: inline-flex;
+  flex-shrink: 0;
+  min-width: 100%;
+  height: 80px
+}
 body {
   @apply bg-white text-gray-800;
 }
