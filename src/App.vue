@@ -1,43 +1,63 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-
-
+import casaOffsetLogo from './assets/casaoffset.jpg'
+import hakkaResidencialLogo from './assets/hakka-residencial.jpg'
+import institutoDaCriancaLogo from './assets/espaco-humanizado.webp'
 // Dados reativos
 const selectedCategory = ref<string>('todos')
 const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
-const projects = ref([
-  {
-    id: 1,
-    title: 'Projeto de Ponte Metálica',
-    category: 'hidráulica',
-    image: 'https://placehold.co/600x400?text=Ponte+Metálica'
-  },
-  {
-    id: 2,
-    title: 'Sistema de Energia Solar',
-    category: 'elétrica',
-    image: 'https://placehold.co/600x400?text=Energia+Solar'
-  },
+const projects = ref([  
+  { id: 1, title: 'Projeto de Ponte Metálica', category: 'hidráulica', image: 'https://placehold.co/600x400?text=Ponte+Metálica' },
+  { id: 2, title: 'Sistema de Energia Solar', category: 'elétrica', image: 'https://placehold.co/600x400?text=Energia+Solar' },
   // Adicione mais projetos...
 ])
 
 // Filtragem de projetos
 const filteredProjects = computed(() => {
   if (selectedCategory.value === 'todos') return projects.value
-  return projects.value.filter(project => 
-    project.category === selectedCategory.value
-  )
+  return projects.value.filter(project => project.category === selectedCategory.value)
 })
 
-const smoothScroll = (id: string) => {
-  const element = document.getElementById(id)
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
+// Simulação de ação ao ver case study
+const viewProject = (id: number) => {
+  console.log('Ver case study projeto', id)
+  // TODO: abrir modal ou navegar para página interna de projeto
 }
+
+// Projetos em Destaque (CZN foi responsável pelas instalações elétricas e hidráulicas)
+const highlightProjects = ref([  
+  { title: 'Institutito da Criança', url: 'https://www.atelierlab.com.br/espaco-de-humanizacao', project: 'Institutito da Criança - USP', role: 'Instalações Elétricas e Hidráulicas', logo: institutoDaCriancaLogo },
+  { title: 'Hakka Residencial', url: 'https://www.galeriadaarquitetura.com.br/projeto/slideshow/7203/2', project: 'Hakka Residencial', role: 'Instalações Elétricas e Hidráulicas', logo: hakkaResidencialLogo },
+  { title: 'Offset House – Archello', url: 'https://archello.com/pt/project/casa-offset', project: 'Offset House', role: 'Instalações Elétricas e Hidráulicas', logo: casaOffsetLogo},
+])
+
+// Certificações e documentos
+const certItems = ref([  
+  {
+    title: 'Ata Comissão CMH – 26/09/2017',
+    subtitle: 'Comissão Municipal de Habitação',
+    url: 'https://capital.sp.gov.br/documents/d/habitacao/ata-da-7-reuniao-ordinaria-da-comissao-executiva-do-cmh-de-26092017-6-gestao-junto-pdf'
+  }
+])
+
+// Smooth scroll genérico
+const smoothScroll = (id: string) => {
+  const el = document.getElementById(id)
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
+
+const modalOpen = ref(false)
+const modalData = ref<any>(null)
+
+const openModal = (data: any) => {
+  modalData.value = data
+  modalOpen.value = true
+}
+const closeModal = () => {
+  modalOpen.value = false
+  modalData.value = null
+}
+
 </script>
 
 <template>
@@ -85,8 +105,13 @@ const smoothScroll = (id: string) => {
       <p class="text-xl text-gray-100 mb-8">
         Soluções integradas em engenharia elétrica e hidráulica
       </p>
-      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition" >
-        Solicitar Orçamento
+      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition inline-flex items-center" onclick="window.open('https://wa.me/5511945089488', '_blank')">
+        <span class="mr-3">
+          Solicitar Orçamento 
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" >
+          <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
       </button>
     </div>
   </section>
@@ -198,16 +223,39 @@ const smoothScroll = (id: string) => {
     </div>
     </div>
   </section>
+
   
-  <!-- Portfólio -->
-  <section id="portfolio" class="bg-gray-50 py-16">
+  <section id="portfolio" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <p class="uppercase text-sm mb-2 text-primary">Colaborações CZN</p>
+      <h2 class="text-3xl font-bold mb-4">Projetos em Destaque</h2>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div
+          v-for="(item, idx) in highlightProjects"
+          :key="idx"
+          class="cursor-pointer block bg-gray-100 rounded-xl shadow hover:shadow-lg transition"
+          @click="openModal(item)"
+          style="width: 300px;"
+        >
+          <div class="overflow-hidden rounded-t-xl" style="height: 160px;">
+            <img :src="item.logo" :alt="item.project" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-4">
+            <h3 class="text-sm font-semibold text-gray-800">{{ item.project }}</h3>
+            <p class="text-xs text-gray-600">{{ item.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outros Projetos -->
+  <section id="projects" class="bg-gray-50 py-16">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Nossos Projetos</h2>
-      
-      <!-- Filtros -->
+      <h2 class="text-4xl font-bold text-center mb-12">Outros Projetos</h2>
       <div class="flex justify-center gap-4 mb-8 flex-wrap">
-        <button 
-          v-for="category in categories" 
+        <button
+          v-for="category in categories"
           :key="category"
           @click="selectedCategory = category"
           class="px-4 py-2 rounded-full capitalize"
@@ -219,24 +267,64 @@ const smoothScroll = (id: string) => {
           {{ category }}
         </button>
       </div>
-
-      <!-- Grid de Projetos -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div 
-          v-for="project in filteredProjects" 
+        <div
+          v-for="project in filteredProjects"
           :key="project.id"
-          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition cursor-pointer"
+          @click="openModal(project)"
         >
-          <img 
-            :src="project.image" 
-            :alt="project.title"
-            class="w-full h-48 object-cover"
-          >
+          <img :src="project.image" :alt="project.title" class="w-full h-48 object-cover">
           <div class="p-6">
             <h3 class="text-lg font-semibold mb-2">{{ project.title }}</h3>
-            <span class="text-sm text-blue-600 capitalize">
-              {{ project.category }}
-            </span>
+            <span class="text-sm text-blue-600 capitalize">{{ project.category }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div
+    v-if="modalOpen"
+    class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 px-4"
+    @click.self="closeModal"
+  >
+    <div class="bg-white rounded-2xl shadow-xl max-w-2xl w-full p-6 relative">
+      <button
+        class="absolute top-4 right-4 text-gray-500 hover:text-gray-800"
+        @click="closeModal"
+      >✕</button>
+      <div v-if="modalData">
+        <h2 class="text-2xl font-bold mb-4">{{ modalData.project || modalData.title }}</h2>
+        <p class="text-gray-700 mb-4">{{ modalData.description || modalData.title }}</p>
+        <ul class="list-disc list-inside mb-4">
+          <li v-for="(spec, i) in modalData.specs || []" :key="i">{{ spec }}</li>
+        </ul>
+        <p class="text-sm text-gray-600 mb-4">Função: {{ modalData.role }}</p>
+        <a
+          v-if="modalData.url"
+          :href="modalData.url"
+          target="_blank"
+          class="inline-block bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-600 transition"
+        >Ver no site</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificações & Documentos -->
+  <section id="certs" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <p class="uppercase text-sm mb-2 text-primary">Documentos Oficiais</p>
+      <h2 class="text-3xl font-bold mb-8">Reconhecimentos e Atas</h2>
+      <div class="max-w-lg mx-auto grid grid-cols-1 gap-6">
+        <div v-for="(doc, i) in certItems" :key="i" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center">
+          <svg class="h-8 w-8 text-red-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+          <div class="text-left">
+            <h3 class="font-semibold text-gray-800">{{ doc.title }}</h3>
+            <p class="text-sm text-gray-600 mb-2">{{ doc.subtitle }}</p>
+            <a :href="doc.url" target="_blank" class="text-primary underline">Download PDF</a>
           </div>
         </div>
       </div>
@@ -244,7 +332,7 @@ const smoothScroll = (id: string) => {
   </section>
 
   <!-- Clients Section -->
-  <section class="py-8 bg-gray-50 overflow-hidden">
+  <section class="py-8 bg-gray-50 overflow-hidden" id="clients">
     <div class="relative">
       <h2 class="text-4xl font-bold text-center mb-12">Clientes e Parceiros</h2>
       
@@ -277,14 +365,14 @@ const smoothScroll = (id: string) => {
     </div>
   </section>
   
-  <section id="contato" class="py-16 bg-gray-50 text-gray-800">
+  <section id="contato" class="py-16 bg-white text-gray-800">
     <div class="container mx-auto px-6">
       <p class="text-center uppercase text-sm text-red-600 font-semibold mb-2">Contato</p>
       <h2 class="text-4xl font-bold text-center mb-12">Vamos Conversar?</h2>
   
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
         <!-- Endereço -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -306,7 +394,7 @@ const smoothScroll = (id: string) => {
         </li>
   
         <!-- Email -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -326,7 +414,7 @@ const smoothScroll = (id: string) => {
         </li>
   
         <!-- Telefone -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -355,7 +443,7 @@ const smoothScroll = (id: string) => {
       <div>
         <h4 class="text-2xl font-bold mb-4">CZN</h4>
         <p class="text-gray-400 text-sm">
-          Somos uma empresa especializada em soluções de engenharia elétrica, civil e mecânica.
+          Somos uma empresa especializada em soluções de engenharia elétrica e hidráulica.
           Nossa equipe oferece excelência técnica em projetos públicos e privados.
         </p>
         <div class="flex space-x-4 mt-4">
@@ -373,9 +461,9 @@ const smoothScroll = (id: string) => {
         <h5 class="text-lg font-semibold mb-4">Menu</h5>
         <ul class="text-gray-400 space-y-2 text-sm">
           <li><a href="#" class="hover:text-white">Institucional</a></li>
-          <li><a href="#" class="hover:text-white">Áreas de atuação</a></li>
-          <li><a href="#" class="hover:text-white">Projetos</a></li>
-          <li><a href="#" class="hover:text-white">Clientes</a></li>
+          <li><a href="#services" class="hover:text-white">Áreas de atuação</a></li>
+          <li><a href="#portfolio" class="hover:text-white">Projetos</a></li>
+          <li><a href="#clients" class="hover:text-white">Clientes</a></li>
         </ul>
       </div>
   
