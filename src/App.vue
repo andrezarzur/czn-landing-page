@@ -105,7 +105,7 @@ const closeModal = () => {
       <p class="text-xl text-gray-100 mb-8">
         Soluções integradas em engenharia elétrica e hidráulica
       </p>
-      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition inline-flex items-center" onclick="window.open('https://wa.me/5511945089488', '_blank')">
+      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition inline-flex items-center" onclick="window.open('https://wa.me/5511994310311', '_blank')">
         <span class="mr-3">
           Solicitar Orçamento 
         </span>
@@ -153,23 +153,19 @@ const closeModal = () => {
             <div class="mt-8 text-center">
               <h2 class="text-5xl font-extrabold">
                 <span class="text-red-600">+1,300</span>
-                <span class="text-gray-800"> WW</span>
               </h2>
-              <p class="mt-2 text-lg text-gray-700">Potencia Instaláda</p>
+              <p class="mt-2 text-lg text-gray-700">Projetos</p>
             </div>
       
             <div class="mt-12 flex justify-between w-full max-w-4xl">
               <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold text-red-600">+8</span>
-                <span class="text-sm text-gray-700">Estados</span>
+                <span class="text-3xl font-bold text-red-600">Comercial</span>
               </div>
               <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold text-red-600">+120</span>
-                <span class="text-sm text-gray-700">Projetos</span>
+                <span class="text-3xl font-bold text-red-600">Institucional</span>
               </div>
               <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold text-red-600">+200mil m²</span>
-                <span class="text-sm text-gray-700">de área construída</span>
+                <span class="text-3xl font-bold text-red-600">Residencial</span>
               </div>
             </div>
           </div>
@@ -202,20 +198,20 @@ const closeModal = () => {
         <div class="flex-1 p-8 bg-gray-700 text-gray-200 rounded-2xl shadow-xl hover:shadow-2xl hover:translate-y-1 transition duration-300 ease-in-out text-left border border-gray-700 hover:border-blue-500">
             <h3 class="text-2xl font-bold mb-6 text-blue-400">Elétrica</h3>
             <ul class="text-base space-y-3 list-disc list-inside">
-                <li>Subestações Transformadoras</li>
-                <li>Sistemas de Geração de Energia</li>
-                <li>Instalações em Média e Baixa Tensão</li>
-                <li>Eficiência Energética</li>
-                <li>Iluminação e SPDA</li>
+                <li>Instalações em Baixa Tensão</li>
+                <li>Entradas de Energia em Baixa e Média Tensão</li>
+                <li>Infraestutura para Sistemas de Voz e Dados</li>
+                <li>Aprovações nas Concessionárias de Energia</li>
+                <li>SPDA</li>
             </ul>
         </div>
     
         <div class="flex-1 p-8 bg-gray-700 text-gray-200 rounded-2xl shadow-xl hover:shadow-2xl hover:translate-y-1 transition duration-300 ease-in-out text-left border border-gray-700 hover:border-blue-500">
             <h3 class="text-2xl font-bold mb-6 text-blue-400">Hidráulica</h3>
             <ul class="text-base space-y-3 list-disc list-inside">
-                <li>Redes de Água Potável</li>
+                <li>Redes de Água</li>
                 <li>Drenagem Pluvial</li>
-                <li>Centrais de Água Gelada (CAG)</li>
+                <li>Gás Combustível (GLP e GN)</li>
                 <li>Esgoto Sanitário</li>
                 <li>Combate a Incêndio</li>
             </ul>
@@ -250,7 +246,7 @@ const closeModal = () => {
   </section>
 
   <!-- Outros Projetos -->
-  <section id="projects" class="bg-gray-50 py-16">
+  <!-- <section id="projects" class="bg-gray-50 py-16">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Outros Projetos</h2>
       <div class="flex justify-center gap-4 mb-8 flex-wrap">
@@ -282,7 +278,7 @@ const closeModal = () => {
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <div
     v-if="modalOpen"
@@ -312,24 +308,7 @@ const closeModal = () => {
   </div>
 
   <!-- Certificações & Documentos -->
-  <section id="certs" class="py-16 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <p class="uppercase text-sm mb-2 text-primary">Documentos Oficiais</p>
-      <h2 class="text-3xl font-bold mb-8">Reconhecimentos e Atas</h2>
-      <div class="max-w-lg mx-auto grid grid-cols-1 gap-6">
-        <div v-for="(doc, i) in certItems" :key="i" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center">
-          <svg class="h-8 w-8 text-red-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-          </svg>
-          <div class="text-left">
-            <h3 class="font-semibold text-gray-800">{{ doc.title }}</h3>
-            <p class="text-sm text-gray-600 mb-2">{{ doc.subtitle }}</p>
-            <a :href="doc.url" target="_blank" class="text-primary underline">Download PDF</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- Clients Section -->
   <section class="py-8 bg-gray-50 overflow-hidden" id="clients">
@@ -364,15 +343,34 @@ const closeModal = () => {
       <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
     </div>
   </section>
+
+  <section id="certs" class="py-16 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <p class="uppercase text-sm mb-2 text-primary">Documentos Oficiais</p>
+      <h2 class="text-3xl font-bold mb-8">Reconhecimentos e Atas</h2>
+      <div class="max-w-lg mx-auto grid grid-cols-1 gap-6">
+        <div v-for="(doc, i) in certItems" :key="i" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center">
+          <svg class="h-8 w-8 text-red-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+          <div class="text-left">
+            <h3 class="font-semibold text-gray-800">{{ doc.title }}</h3>
+            <p class="text-sm text-gray-600 mb-2">{{ doc.subtitle }}</p>
+            <a :href="doc.url" target="_blank" class="text-primary underline">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
-  <section id="contato" class="py-16 bg-white text-gray-800">
+  <section id="contato" class="py-16 bg-gray-50 text-gray-800">
     <div class="container mx-auto px-6">
       <p class="text-center uppercase text-sm text-red-600 font-semibold mb-2">Contato</p>
       <h2 class="text-4xl font-bold text-center mb-12">Vamos Conversar?</h2>
   
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
         <!-- Endereço -->
-        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -394,7 +392,7 @@ const closeModal = () => {
         </li>
   
         <!-- Email -->
-        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -410,11 +408,16 @@ const closeModal = () => {
                 czneng@uol.com.br
               </a>
             </p>
+            <p class="text-gray-600 text-sm">
+              <a href="mailto:czneng@uol.com.br" class="underline hover:text-red-600">
+                czn.engenharia@gmail.com
+              </a>
+            </p>
           </div>
         </li>
   
         <!-- Telefone -->
-        <li class="flex items-center border-l-4 border-red-600 bg-gray-50 p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
