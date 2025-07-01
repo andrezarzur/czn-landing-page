@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import casaOffsetLogo from './assets/casaoffset.jpg'
 import hakkaResidencialLogo from './assets/hakka-residencial.jpg'
 import institutoDaCriancaLogo from './assets/espaco-humanizado.webp'
 // Dados reativos
-const selectedCategory = ref<string>('todos')
-const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
-const projects = ref([  
-  { id: 1, title: 'Projeto de Ponte Metálica', category: 'hidráulica', image: 'https://placehold.co/600x400?text=Ponte+Metálica' },
-  { id: 2, title: 'Sistema de Energia Solar', category: 'elétrica', image: 'https://placehold.co/600x400?text=Energia+Solar' },
-  // Adicione mais projetos...
-])
+// const selectedCategory = ref<string>('todos')
+// const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
+// const projects = ref([  
+//   { id: 1, title: 'Projeto de Ponte Metálica', category: 'hidráulica', image: 'https://placehold.co/600x400?text=Ponte+Metálica' },
+//   { id: 2, title: 'Sistema de Energia Solar', category: 'elétrica', image: 'https://placehold.co/600x400?text=Energia+Solar' },
+//   // Adicione mais projetos...
+// ])
 
 // Filtragem de projetos
-const filteredProjects = computed(() => {
-  if (selectedCategory.value === 'todos') return projects.value
-  return projects.value.filter(project => project.category === selectedCategory.value)
-})
+// const filteredProjects = computed(() => {
+//   if (selectedCategory.value === 'todos') return projects.value
+//   return projects.value.filter(project => project.category === selectedCategory.value)
+// })
 
-// Simulação de ação ao ver case study
-const viewProject = (id: number) => {
-  console.log('Ver case study projeto', id)
-  // TODO: abrir modal ou navegar para página interna de projeto
-}
+// // Simulação de ação ao ver case study
+// const viewProject = (id: number) => {
+//   console.log('Ver case study projeto', id)
+//   // TODO: abrir modal ou navegar para página interna de projeto
+// }
 
 // Projetos em Destaque (CZN foi responsável pelas instalações elétricas e hidráulicas)
 const highlightProjects = ref([  
