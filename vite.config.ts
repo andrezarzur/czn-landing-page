@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@heroicons/vue/24/outline']
   },
-  base: '/czn-landing-page/'
+  base: '/'
 })
