@@ -333,6 +333,9 @@ const closeModal = () => {
             <img src="./assets/logo-npc.png" alt="NPC" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-usp.png" alt="USP" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-unifesp.png" alt="Unifesp" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-ditaco.png" alt="Ditaco" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-gtj.png" alt="Gtj" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
+            <img src="./assets/logo-majore.png" alt="Majore" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-senai.png" alt="Senai" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
             <img src="./assets/logo-sesi.png" alt="Sesi" class="h-16 w-auto opacity-80 hover:opacity-100 hover:scale-105 transition-all">
           </template>
