@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import casaOffsetLogo from './assets/casaoffset.jpg'
 import hakkaResidencialLogo from './assets/hakka-residencial.jpg'
 import institutoDaCriancaLogo from './assets/espaco-humanizado.webp'
+import brazilMapDots from './assets/brazil-light-red-dots.png'
 // Dados reativos
 // const selectedCategory = ref<string>('todos')
 // const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
@@ -144,7 +145,7 @@ const closeModal = () => {
           <!-- World map dotted background -->
           <div
             class="absolute inset-0 bg-no-repeat bg-center bg-contain"
-            :style="{ backgroundImage: 'url(src/assets/brazil-light-red-dots.png)' }"
+            :style="{ backgroundImage: `url(${brazilMapDots})` }"
             aria-hidden="true"
           ></div>
       
