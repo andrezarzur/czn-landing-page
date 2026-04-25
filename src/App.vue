@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import casaOffsetLogo from './assets/casaoffset.jpg'
 import hakkaResidencialLogo from './assets/hakka-residencial.jpg'
 import institutoDaCriancaLogo from './assets/espaco-humanizado.webp'
-import brazilMapDots from './assets/brazil-light-red-dots.png'
+import brazilMapDots from './assets/brazil-light-blue-dots.png'
 // Dados reativos
 // const selectedCategory = ref<string>('todos')
 // const categories = ref<string[]>(['todos', 'hidráulica', 'elétrica'])
@@ -69,7 +69,7 @@ const closeModal = () => {
         <!-- <div class="text-3xl font-bold text-primary">
           CZN
         </div> -->
-        <img src="./assets/logotype-red.png" alt="Logo" class="h-20 w-20">
+        <img src="./assets/logotype-blue.png" alt="Logo" class="h-20 w-20">
         <div class="hidden md:flex space-x-8">
           <a 
             href="#services" 
@@ -153,20 +153,20 @@ const closeModal = () => {
      
             <div class="mt-8 text-center">
               <h2 class="text-5xl font-extrabold">
-                <span class="text-red-600">+1.500</span>
+                <span class="text-primary">+1.500</span>
               </h2>
               <p class="mt-2 text-lg text-gray-700">Projetos</p>
             </div>
       
             <div class="mt-12 flex flex-col lg:flex-row justify-between w-full max-w-4xl gap-4">
               <div class="flex flex-col items-center">
-                <span class="text-3xl font-bold text-red-600">Comercial</span>
+                <span class="text-3xl font-bold text-primary">Comercial</span>
               </div>
               <div class="flex flex-col items-center">
-                <span class="text-3xl font-bold text-red-600">Institucional</span>
+                <span class="text-3xl font-bold text-primary">Institucional</span>
               </div>
               <div class="flex flex-col items-center">
-                <span class="text-3xl font-bold text-red-600">Residencial</span>
+                <span class="text-3xl font-bold text-primary">Residencial</span>
               </div>
             </div>
           </div>
@@ -354,7 +354,7 @@ const closeModal = () => {
       <h2 class="text-3xl font-bold mb-8">Reconhecimentos e Atas</h2>
       <div class="max-w-lg mx-auto grid grid-cols-1 gap-6">
         <div v-for="(doc, i) in certItems" :key="i" class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center">
-          <svg class="h-8 w-8 text-red-600 mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="h-8 w-8 text-primary mr-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
           </svg>
           <div class="text-left">
@@ -369,15 +369,15 @@ const closeModal = () => {
   
   <section id="contato" class="py-16 bg-gray-50 text-gray-800">
     <div class="container mx-auto px-6">
-      <p class="text-center uppercase text-sm text-red-600 font-semibold mb-2">Contato</p>
+      <p class="text-center uppercase text-sm text-primary font-semibold mb-2">Contato</p>
       <h2 class="text-4xl font-bold text-center mb-12">Vamos Conversar?</h2>
   
       <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
         <!-- Endereço -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-primary bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
-            <div class="p-4 bg-red-100 rounded-full">
-              <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="p-4 bg-primary-50 rounded-full">
+              <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -396,10 +396,10 @@ const closeModal = () => {
         </li>
   
         <!-- Email -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition min-w-0">
+        <li class="flex items-center border-l-4 border-primary bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition min-w-0">
           <div class="flex-shrink-0 mr-6">
-            <div class="p-4 bg-red-100 rounded-full">
-              <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="p-4 bg-primary-50 rounded-full">
+              <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 4v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
               </svg>
@@ -408,12 +408,12 @@ const closeModal = () => {
           <div class="flex-1 text-center min-w-0">
             <h3 class="text-lg font-semibold mb-2">Email</h3>
             <p class="text-gray-600 text-sm truncate">
-              <a href="mailto:czneng@uol.com.br" class="underline hover:text-red-600">
+              <a href="mailto:czneng@uol.com.br" class="underline hover:text-primary">
                 czneng@uol.com.br
               </a>
             </p>
             <p class="text-gray-600 text-sm truncate">
-              <a href="mailto:czneng@uol.com.br" class="underline hover:text-red-600">
+              <a href="mailto:czneng@uol.com.br" class="underline hover:text-primary">
                 czn.engenharia@gmail.com
               </a>
             </p>
@@ -421,10 +421,10 @@ const closeModal = () => {
         </li>
   
         <!-- Telefone -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-primary bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
           <div class="flex-shrink-0 mr-6">
-            <div class="p-4 bg-red-100 rounded-full">
-              <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div class="p-4 bg-primary-50 rounded-full">
+              <svg class="w-6 h-6 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
               </svg>

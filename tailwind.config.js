@@ -5,11 +5,11 @@ export default {
     extend: {      
       colors: {
         primary: {
-          DEFAULT: '#FC0100',   // base
-          50:  '#FFE5E5',       // very light
-          100: '#FFC2C2',       // light
-          200: '#FF8A8A',       // soft
-          600: '#c60302',       // dark
+          DEFAULT: '#0000b8',   // base
+          50:  '#F0F0FF',       // very light
+          100: '#CCCCFF',       // light
+          200: '#9999FF',       // soft
+          600: '#000080',       // dark
         },
         secondary: {
           DEFAULT: '#0066FF',    // Electric blue for tech trust
