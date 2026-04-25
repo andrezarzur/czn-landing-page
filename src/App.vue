@@ -158,7 +158,7 @@ const closeModal = () => {
               <p class="mt-2 text-lg text-gray-700">Projetos</p>
             </div>
       
-            <div class="mt-12 flex justify-between w-full max-w-4xl">
+            <div class="mt-12 flex flex-col lg:flex-row justify-between w-full max-w-4xl gap-4">
               <div class="flex flex-col items-center">
                 <span class="text-3xl font-bold text-red-600">Comercial</span>
               </div>
@@ -393,7 +393,7 @@ const closeModal = () => {
         </li>
   
         <!-- Email -->
-        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition">
+        <li class="flex items-center border-l-4 border-red-600 bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition min-w-0">
           <div class="flex-shrink-0 mr-6">
             <div class="p-4 bg-red-100 rounded-full">
               <svg class="w-6 h-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -402,14 +402,14 @@ const closeModal = () => {
               </svg>
             </div>
           </div>
-          <div class="flex-1 text-center">
+          <div class="flex-1 text-center min-w-0">
             <h3 class="text-lg font-semibold mb-2">Email</h3>
-            <p class="text-gray-600 text-sm">
+            <p class="text-gray-600 text-sm truncate">
               <a href="mailto:czneng@uol.com.br" class="underline hover:text-red-600">
                 czneng@uol.com.br
               </a>
             </p>
-            <p class="text-gray-600 text-sm">
+            <p class="text-gray-600 text-sm truncate">
               <a href="mailto:czneng@uol.com.br" class="underline hover:text-red-600">
                 czn.engenharia@gmail.com
               </a>
