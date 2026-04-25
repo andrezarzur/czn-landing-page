@@ -106,7 +106,7 @@ const closeModal = () => {
       <p class="text-xl text-gray-100 mb-8">
         Soluções integradas em engenharia elétrica e hidráulica
       </p>
-      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition inline-flex items-center" onclick="window.open('https://wa.me/5511994310311', '_blank')">
+      <button class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary-600 hover:border-primary-600 transition inline-flex items-center" onclick="window.open('https://wa.me/551129521317', '_blank')">
         <span class="mr-3">
           Solicitar Orçamento 
         </span>
@@ -127,7 +127,7 @@ const closeModal = () => {
       <div>
         <p class="text-sm text-primary uppercase mb-2">Sobre Nós</p>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          Há 31 anos, entregando excelência, seriedade e inovação
+          Desde 1994 entregando excelência, seriedade e inovação
         </h2>
         <p class="text-gray-600 mb-4">
           Na <strong>CZN Engenharia</strong>, somos especialistas em projetos e consultoria de sistemas hidráulicos, elétricos e de combate a incêndio — oferecendo soluções integradas que garantem segurança, eficiência e máximo retorno para o seu investimento.
@@ -153,7 +153,7 @@ const closeModal = () => {
      
             <div class="mt-8 text-center">
               <h2 class="text-5xl font-extrabold">
-                <span class="text-red-600">+1,300</span>
+                <span class="text-red-600">+1.500</span>
               </h2>
               <p class="mt-2 text-lg text-gray-700">Projetos</p>
             </div>
@@ -193,7 +193,7 @@ const closeModal = () => {
     <!-- Conteúdo principal -->
     <div class="relative z-10 container mx-auto px-6 text-center">
       <p class="uppercase text-sm mb-2">Conheça nossas</p>
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Áreas de <span class="text-primary">Atuação</span></h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Áreas de Atuação</h2>
   
       <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 max-w-4xl mx-auto py-8">
         <div class="flex-1 p-8 bg-gray-700 text-gray-200 rounded-2xl shadow-xl hover:shadow-2xl hover:translate-y-1 transition duration-300 ease-in-out text-left border border-gray-700 hover:border-blue-500">
@@ -478,7 +478,7 @@ const closeModal = () => {
           Avenida Santa Inês 1139, sala 3<br>
           Parque Mandaqui – São Paulo / SP<br>
           CEP 02415-001<br>
-          <a href="mailto:czneng@uol.com.br" class="hover:text-white">czneng@uol.com.br</a><br>
+          <a href="mailto:czn.engenharia@gmail.com" class="hover:text-white">czn.engenharia@gmail.com</a><br>
           <span>Tel: (11) 2952-1317</span>
         </p>
       </div>
